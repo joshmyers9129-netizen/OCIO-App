@@ -28,8 +28,8 @@ import { LESSON_VISUALS } from "@/components/visuals";
 
 const MODULE_ID = DEFAULT_MODULE_ID;
 
-// ── markdown renderer ─────────────────────────────────────────────────────────
-// Lightweight inline parser — no external library.
+// Ã¢â€â‚¬Ã¢â€â‚¬ markdown renderer Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// Lightweight inline parser Ã¢â‚¬â€ no external library.
 // Handles: **bold**, paragraph breaks (\n\n), bullet lists (- ), numbered lists (1. ).
 
 function renderInline(text: string): React.ReactNode[] {
@@ -101,7 +101,7 @@ function classifyLine(line: string): LineKind {
 
 function renderContent(text: string): React.ReactNode {
   // Classify every line, then group consecutive lines of the same kind.
-  // This handles single-\n transitions (text→table, text→bullets, etc.)
+  // This handles single-\n transitions (textÃ¢â€ â€™table, textÃ¢â€ â€™bullets, etc.)
   const allLines = text.split("\n");
   const segments: { kind: LineKind; lines: string[] }[] = [];
 
@@ -156,7 +156,7 @@ function renderContent(text: string): React.ReactNode {
   return <div className="space-y-2">{nodes}</div>;
 }
 
-// ── block renderer ────────────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ block renderer Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 const BLOCK_STYLE: Record<
   LessonBlockType,
@@ -188,7 +188,7 @@ const BLOCK_STYLE: Record<
     border: "border-[#000]/10",
     bg: "bg-white",
     labelColor: "text-[#404040]",
-    // no left accent — clean white reads as the signal block
+    // no left accent Ã¢â‚¬â€ clean white reads as the signal block
   },
   example: {
     label: "Example",
@@ -262,6 +262,7 @@ function Block({ block }: { block: LessonBlock }) {
     const VisualComponent = block.visualId
       ? LESSON_VISUALS[block.visualId]
       : null;
+    const hasDirectVisual = Boolean(VisualComponent || block.src);
     return (
       <div
         className={`rounded-xl border ${s.border} ${s.bg} px-5 py-5 mb-5`}
@@ -275,7 +276,7 @@ function Block({ block }: { block: LessonBlock }) {
           {block.title}
         </p>
 
-        {block.content && (
+        {block.content && hasDirectVisual && (
           <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
             {renderContent(block.content)}
           </div>
@@ -293,13 +294,29 @@ function Block({ block }: { block: LessonBlock }) {
             className="w-full rounded-lg mb-4 object-contain max-h-80"
           />
         )}
+        {!hasDirectVisual && (
+          <div className="mb-4 rounded-xl border border-dashed border-[#2294BD]/30 bg-white/70 p-4">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-[#2294BD] mb-2">
+              Visual Blueprint
+            </p>
+            {block.content ? (
+              <div className="text-[14px] text-[#000000] leading-[1.7]">
+                {renderContent(block.content)}
+              </div>
+            ) : (
+              <p className="text-sm text-[#404040] leading-relaxed">
+                This lesson references a custom visual that has not been implemented as a component yet.
+              </p>
+            )}
+          </div>
+        )}
         {block.caption && (
           <p className="text-xs text-[#404040] italic mb-3">{block.caption}</p>
         )}
         {block.whyItMatters && (
           <div className="rounded-lg border border-[#2294BD]/20 bg-[#2294BD]/5 px-4 py-3 mb-3">
             <span className="text-xs font-bold text-[#2294BD] uppercase tracking-wide">
-              Why this matters —{" "}
+              Why this matters Ã¢â‚¬â€{" "}
             </span>
             <span className="text-sm text-[#000000] leading-relaxed">
               {block.whyItMatters}
@@ -338,7 +355,7 @@ function Block({ block }: { block: LessonBlock }) {
   );
 }
 
-// ── MC question ───────────────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ MC question Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 function MCQuestionCard({
   q,
@@ -358,7 +375,7 @@ function MCQuestionCard({
   return (
     <div className="mb-7">
       <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
-        Q{index + 1} · Multiple choice
+        Q{index + 1} Ã‚Â· Multiple choice
       </p>
       <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
         {q.prompt}
@@ -376,11 +393,11 @@ function MCQuestionCard({
           if (submitted) {
             if (isRight) {
               style = "border-2 border-[#2294BD] bg-[#2294BD]/10 text-[#000000]";
-              icon = "✓";
+              icon = "Ã¢Å“â€œ";
             } else if (isSelected && !isRight) {
               style =
                 "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B] line-through";
-              icon = "✗";
+              icon = "Ã¢Å“â€”";
             } else {
               style =
                 "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
@@ -420,10 +437,10 @@ function MCQuestionCard({
               : "bg-[#D9532B]/8 text-[#D9532B] border border-[#D9532B]/20"
           }`}
         >
-          <span>{isCorrect ? "✓ Correct" : "✗ Incorrect"}</span>
+          <span>{isCorrect ? "Ã¢Å“â€œ Correct" : "Ã¢Å“â€” Incorrect"}</span>
           {!isCorrect && (
             <span className="text-[#404040] font-normal">
-              — correct answer highlighted above
+              Ã¢â‚¬â€ correct answer highlighted above
             </span>
           )}
         </div>
@@ -432,7 +449,7 @@ function MCQuestionCard({
   );
 }
 
-// ── Short-response question ───────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ Short-response question Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 type SRState = "unanswered" | "submitted";
 
@@ -500,7 +517,7 @@ function SRQuestionCard({
   return (
     <div className="mb-7">
       <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
-        Q{index + 1} · Short response
+        Q{index + 1} Ã‚Â· Short response
       </p>
       <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
         {q.prompt}
@@ -510,7 +527,7 @@ function SRQuestionCard({
         disabled={state === "submitted"}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Write your answer here…"
+        placeholder="Write your answer hereÃ¢â‚¬Â¦"
         rows={4}
         className="w-full rounded-xl border border-[#E8DDD4] bg-white px-4 py-3 text-sm text-[#000000] placeholder:text-[#9A918A] resize-none focus:outline-none focus:border-[#2294BD] focus:ring-1 focus:ring-[#2294BD]/30 disabled:bg-[#F9F6F3] disabled:text-[#404040] transition-colors"
       />
@@ -542,7 +559,7 @@ function SRQuestionCard({
               disabled={feedbackLoading}
               className="mt-2 text-sm font-medium text-[#7C5CBF] bg-[#7C5CBF]/10 hover:bg-[#7C5CBF]/18 disabled:opacity-40 disabled:cursor-not-allowed px-4 py-2 rounded-xl transition-colors"
             >
-              {feedbackLoading ? "Getting feedback…" : "Get feedback"}
+              {feedbackLoading ? "Getting feedbackÃ¢â‚¬Â¦" : "Get feedback"}
             </button>
           )}
 
@@ -588,7 +605,7 @@ function SRQuestionCard({
                   <ul className="space-y-0.5">
                     {feedback.gaps.map((g, i) => (
                       <li key={i} className="text-sm text-[#000000] flex gap-2">
-                        <span className="text-[#D9532B] flex-shrink-0">–</span>
+                        <span className="text-[#D9532B] flex-shrink-0">Ã¢â‚¬â€œ</span>
                         {g}
                       </li>
                     ))}
@@ -614,7 +631,7 @@ function SRQuestionCard({
   );
 }
 
-// ── Confidence rating ─────────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ Confidence rating Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 const CONFIDENCE_LABELS = ["Not at all", "Shaky", "Okay", "Solid", "Nailed it"];
 
@@ -659,7 +676,7 @@ function ConfidenceRating({
   );
 }
 
-// ── Spaced quiz injection ─────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ Spaced quiz injection Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 type InjectedQuestion = MCQuestion & { sourceLessonId: string; sourceDayNumber: number };
 
@@ -712,7 +729,7 @@ function InjectedQuestionCard({
     <div className="mb-7">
       <div className="flex items-center gap-2 mb-2">
         <p className="text-[10px] font-bold text-[#7C5CBF] uppercase tracking-widest">
-          Spaced recall · Day {q.sourceDayNumber}
+          Spaced recall Ã‚Â· Day {q.sourceDayNumber}
         </p>
       </div>
       <p className="text-[15px] font-medium text-[#000000] leading-snug mb-3">
@@ -771,7 +788,7 @@ function InjectedQuestionCard({
           <span>{isCorrect ? "\u2713 Correct" : "\u2717 Incorrect"}</span>
           {!isCorrect && (
             <span className="text-[#404040] font-normal">
-              — correct answer highlighted above
+              Ã¢â‚¬â€ correct answer highlighted above
             </span>
           )}
         </div>
@@ -780,7 +797,7 @@ function InjectedQuestionCard({
   );
 }
 
-// ── Prereq knowledge gate ─────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ Prereq knowledge gate Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 function PrereqGate({
   prereqIds,
@@ -919,11 +936,11 @@ function PrereqGate({
           }`}
         >
           {score === questions.length ? (
-            "✓ All correct — proceeding to lesson."
+            "Ã¢Å“â€œ All correct Ã¢â‚¬â€ proceeding to lesson."
           ) : (
             <div>
               <p>
-                {score}/{questions.length} correct — consider reviewing
+                {score}/{questions.length} correct Ã¢â‚¬â€ consider reviewing
                 prerequisites first.
               </p>
               <div className="flex gap-2 mt-2">
@@ -948,7 +965,7 @@ function PrereqGate({
   );
 }
 
-// ── Quiz attempt history ─────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ Quiz attempt history Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 function QuizHistory({ attempts }: { attempts: QuizAttempt[] }) {
   if (attempts.length <= 1) return null;
@@ -964,7 +981,7 @@ function QuizHistory({ attempts }: { attempts: QuizAttempt[] }) {
             className="text-xs bg-[#F0E6DD] text-[#404040] px-2.5 py-1.5 rounded-lg"
           >
             <span className="font-medium">#{a.attemptNumber}</span>{" "}
-            {Math.round(a.score * 100)}% · {a.confidence}/5 conf ·{" "}
+            {Math.round(a.score * 100)}% Ã‚Â· {a.confidence}/5 conf Ã‚Â·{" "}
             {new Date(a.completedAt).toLocaleDateString()}
           </div>
         ))}
@@ -973,7 +990,7 @@ function QuizHistory({ attempts }: { attempts: QuizAttempt[] }) {
   );
 }
 
-// ── page ──────────────────────────────────────────────────────────────────────
+// Ã¢â€â‚¬Ã¢â€â‚¬ page Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 
 export default function LessonPage({
   params,
@@ -985,16 +1002,16 @@ export default function LessonPage({
   const currentModule = getModuleById(MODULE_ID);
   const lesson = currentModule?.lessons.find((l) => l.lessonId === lessonId);
 
-  // Spaced quiz injection — pick 2-3 questions from old completed lessons
+  // Spaced quiz injection Ã¢â‚¬â€ pick 2-3 questions from old completed lessons
   const [injectedQuestions] = useState<InjectedQuestion[]>(() =>
     pickInjectedQuestions(lessonId, 3)
   );
   const [injectedAnswers, setInjectedAnswers] = useState<Record<string, string>>({});
   const [injectedSubmitted, setInjectedSubmitted] = useState(false);
 
-  // MC answers: questionId → selected option
+  // MC answers: questionId Ã¢â€ â€™ selected option
   const [mcAnswers, setMcAnswers] = useState<Record<string, string>>({});
-  // SR states: questionId → state + text
+  // SR states: questionId Ã¢â€ â€™ state + text
   const [srStates, setSrStates] = useState<
     Record<string, { state: SRState; value: string }>
   >({});
@@ -1023,7 +1040,7 @@ export default function LessonPage({
       }
       const noneComplete = lesson.prerequisites.some((p) => !progress[p] || progress[p].status === "not-started");
       if (!noneComplete) {
-        // All prereqs at least started — show gate if lesson not started
+        // All prereqs at least started Ã¢â‚¬â€ show gate if lesson not started
       } else {
         prereqOk = true; // Some prereqs not done, auto-pass
       }
@@ -1162,11 +1179,11 @@ export default function LessonPage({
 
   const questionIndex = (q: QuizQuestion) => allQuestions.indexOf(q);
 
-  // ── AI helper prompts ────────────────────────────────────────────────────────
+  // Ã¢â€â‚¬Ã¢â€â‚¬ AI helper prompts Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
   const topicStr = lesson.topics.slice(0, 3).join(", ");
   const wrongMcDetails = mcQuestions
     .filter((q) => mcAnswers[q.questionId] && mcAnswers[q.questionId] !== q.correctAnswer)
-    .map((q) => `• "${q.prompt}"\n  Correct: "${q.correctAnswer}" | My answer: "${mcAnswers[q.questionId]}"`)
+    .map((q) => `Ã¢â‚¬Â¢ "${q.prompt}"\n  Correct: "${q.correctAnswer}" | My answer: "${mcAnswers[q.questionId]}"`)
     .join("\n");
   const mcHelpPrompt =
     `Lesson: "${lesson.title}" | Topic: ${topicStr}\n` +
@@ -1186,13 +1203,13 @@ export default function LessonPage({
             href="/modules"
             className="text-xs text-[#2294BD] hover:underline mb-3 inline-block"
           >
-            ← Modules
+            Ã¢â€ Â Modules
           </a>
           <div className="flex items-baseline gap-2 mb-1">
             <span className="text-xs font-bold text-[#404040] uppercase tracking-widest">
               Day {lesson.dayNumber} of {lessons.length}
             </span>
-            <span className="text-xs text-[#D0C8C0]">·</span>
+            <span className="text-xs text-[#D0C8C0]">Ã‚Â·</span>
             <span className="text-xs text-[#404040]">
               {lesson.estimatedMinutes} min
             </span>
@@ -1252,7 +1269,7 @@ export default function LessonPage({
           {/* Quiz attempt history */}
           <QuizHistory attempts={quizHistory} />
 
-          {/* Spaced recall injection — questions from older lessons */}
+          {/* Spaced recall injection Ã¢â‚¬â€ questions from older lessons */}
           {injectedQuestions.length > 0 && (
             <div className="mb-6">
               <div className="rounded-xl border border-[#7C5CBF]/15 bg-[#7C5CBF]/[0.03] px-5 py-4">
@@ -1260,7 +1277,7 @@ export default function LessonPage({
                   Spaced recall
                 </p>
                 <p className="text-xs text-[#404040] mb-4">
-                  These questions are from earlier lessons — quick retrieval practice to keep older material fresh.
+                  These questions are from earlier lessons Ã¢â‚¬â€ quick retrieval practice to keep older material fresh.
                 </p>
                 {injectedQuestions.map((q) => (
                   <InjectedQuestionCard
@@ -1335,7 +1352,7 @@ export default function LessonPage({
                 }`}
               >
                 <span className="text-lg font-bold">
-                  {mcScore === 1 ? "✓" : mcScore >= 0.5 ? "~" : "✗"}
+                  {mcScore === 1 ? "Ã¢Å“â€œ" : mcScore >= 0.5 ? "~" : "Ã¢Å“â€”"}
                 </span>
                 <span className="text-sm font-semibold">
                   {Math.round(mcScore * mcQuestions.length)}/{mcQuestions.length}{" "}
@@ -1343,10 +1360,10 @@ export default function LessonPage({
                 </span>
                 <span className="text-sm text-[#404040] font-normal">
                   {mcScore === 1
-                    ? "— perfect score"
+                    ? "Ã¢â‚¬â€ perfect score"
                     : mcScore >= 0.5
-                    ? "— review the highlighted answers"
-                    : "— revisit the lesson material"}
+                    ? "Ã¢â‚¬â€ review the highlighted answers"
+                    : "Ã¢â‚¬â€ revisit the lesson material"}
                 </span>
               </div>
               {mcScore < 1 && (
@@ -1410,23 +1427,23 @@ export default function LessonPage({
             )}
             {saved && (
               <div className="mt-3 rounded-xl bg-[#2294BD]/10 border border-[#2294BD]/20 px-4 py-3 flex items-center gap-2">
-                <span className="text-[#2294BD] font-bold">✓</span>
+                <span className="text-[#2294BD] font-bold">Ã¢Å“â€œ</span>
                 <span className="text-sm text-[#2294BD] font-medium">
-                  Lesson complete — good work.
+                  Lesson complete Ã¢â‚¬â€ good work.
                 </span>
                 {nextLesson ? (
                   <a
                     href={`/lesson/${nextLesson.lessonId}`}
                     className="ml-auto text-xs text-[#2294BD] font-semibold hover:underline whitespace-nowrap"
                   >
-                    Day {nextLesson.dayNumber} →
+                    Day {nextLesson.dayNumber} Ã¢â€ â€™
                   </a>
                 ) : (
                   <a
                     href="/modules"
                     className="ml-auto text-xs text-[#2294BD] font-semibold hover:underline"
                   >
-                    All done →
+                    All done Ã¢â€ â€™
                   </a>
                 )}
               </div>

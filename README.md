@@ -1,6 +1,6 @@
-﻿# OCIO Education App
+# OCIO Education App
 
-A self-paced, client-side web app for building OCIO and institutional-investing fluency. It keeps the PE Learning app structure, but the curriculum is now a 20-lesson OCIO education program covering delegated governance, client archetypes, asset allocation, LDI, implementation, private markets, liquidity, reporting, risk, team structure, and provider diligence.
+A self-paced, client-side web app for building OCIO and institutional-investing fluency. It keeps the same app structure, but the curriculum is now a 20-lesson OCIO education program covering delegated governance, client archetypes, asset allocation, LDI, implementation, private markets, liquidity, reporting, risk, team structure, and provider diligence.
 
 ## What it does
 

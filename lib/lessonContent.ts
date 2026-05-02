@@ -7290,3 +7290,7 @@ This discipline matters because teams often confuse analytical completeness with
     ]
   }
 ];
+
+export function getLessonContent(lessonId: string): LessonContent | undefined {
+  return lessonContents.find(c => c.lessonId === lessonId);
+}

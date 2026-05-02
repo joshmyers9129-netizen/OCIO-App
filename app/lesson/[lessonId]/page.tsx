@@ -254,6 +254,272 @@ const BLOCK_STYLE: Record<
   },
 };
 
+// ── Visual blueprint renderer ────────────────────────────────────────────────
+// Parses the structured chart-instruction text used by every visual block and
+// renders each section (chart type, structure, fallback table, teaching point,
+// design specs) with premium styling. The fallback table — pipe-separated rows
+// embedded in the content — becomes the primary data visual.
+
+type VisualSection =
+  | { kind: "chartType"; text: string }
+  | { kind: "structure"; rows: { label: string; value: string }[] }
+  | { kind: "table"; rows: string[][] }
+  | { kind: "teachingPoint"; text: string }
+  | { kind: "designSpec"; text: string }
+  | { kind: "paragraph"; text: string };
+
+const DESIGN_SPEC_PREFIXES = [
+  "layout:",
+  "axes or rows and columns:",
+  "color coding:",
+  "color and role coding:",
+];
+
+function isDesignSpec(text: string): boolean {
+  const lower = text.toLowerCase();
+  return DESIGN_SPEC_PREFIXES.some((p) => lower.startsWith(p));
+}
+
+function parseStructureRows(
+  text: string
+): { label: string; value: string }[] | null {
+  const lines = text.split("\n").filter((l) => l.trim().length > 0);
+  if (lines.length === 0) return null;
+  const rows: { label: string; value: string }[] = [];
+  for (const line of lines) {
+    const m = line.match(/^([^:]{2,60}?):\s+(.+)$/);
+    if (!m) return null;
+    rows.push({ label: m[1].trim(), value: m[2].trim() });
+  }
+  return rows;
+}
+
+function parseVisualSections(content: string): VisualSection[] {
+  const paragraphs = content
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter((p) => p.length > 0);
+
+  const sections: VisualSection[] = [];
+
+  for (const para of paragraphs) {
+    const lower = para.toLowerCase();
+
+    if (lower.startsWith("fallback table:")) {
+      const lines = para.split("\n").slice(1);
+      const rows = lines
+        .map((l) => l.trim())
+        .filter((l) => l.length > 0 && l.includes("|"))
+        .map((l) =>
+          l
+            .replace(/^\|/, "")
+            .replace(/\|$/, "")
+            .split("|")
+            .map((c) => c.trim())
+        );
+      if (rows.length >= 2) {
+        sections.push({ kind: "table", rows });
+        continue;
+      }
+    }
+
+    if (lower.startsWith("chart type:")) {
+      sections.push({
+        kind: "chartType",
+        text: para.replace(/^chart type:\s*/i, "").trim(),
+      });
+      continue;
+    }
+
+    if (lower.startsWith("teaching point:")) {
+      sections.push({
+        kind: "teachingPoint",
+        text: para.replace(/^teaching point:\s*/i, "").trim(),
+      });
+      continue;
+    }
+
+    // Multi-line "Key: value" blocks (Primary columns:, X-axis:, Quadrants:, …).
+    const structureRows = parseStructureRows(para);
+    if (structureRows && structureRows.length >= 2) {
+      // Filter out pure boilerplate rows; keep substantive structural specs.
+      const filtered = structureRows.filter(
+        (r) => !isDesignSpec(`${r.label}:`)
+      );
+      if (filtered.length >= 2) {
+        sections.push({ kind: "structure", rows: filtered });
+        // Any boilerplate rows we filtered out get collapsed into a designSpec
+        // appended after, so they remain available without dominating the layout.
+        const dropped = structureRows.filter((r) =>
+          isDesignSpec(`${r.label}:`)
+        );
+        for (const d of dropped) {
+          sections.push({
+            kind: "designSpec",
+            text: `${d.label}: ${d.value}`,
+          });
+        }
+        continue;
+      }
+    }
+
+    if (isDesignSpec(para)) {
+      sections.push({ kind: "designSpec", text: para });
+      continue;
+    }
+
+    sections.push({ kind: "paragraph", text: para });
+  }
+
+  return sections;
+}
+
+function VisualBlueprint({ content }: { content: string }) {
+  const sections = parseVisualSections(content);
+  const designSpecs = sections.filter(
+    (s): s is Extract<VisualSection, { kind: "designSpec" }> =>
+      s.kind === "designSpec"
+  );
+  const primary = sections.filter((s) => s.kind !== "designSpec");
+
+  return (
+    <div className="mb-4 space-y-4">
+      {primary.map((sec, i) => {
+        if (sec.kind === "chartType") {
+          return (
+            <div key={i} className="flex items-center gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#2294BD] bg-[#2294BD]/10 border border-[#2294BD]/20 rounded-full px-2.5 py-1">
+                Chart type
+              </span>
+              <span className="text-[13px] text-[#404040] leading-snug">
+                {sec.text}
+              </span>
+            </div>
+          );
+        }
+
+        if (sec.kind === "structure") {
+          return (
+            <div
+              key={i}
+              className="rounded-xl border border-[#E8DDD4] bg-white shadow-sm overflow-hidden"
+            >
+              <div className="divide-y divide-[#F0E6DD]">
+                {sec.rows.map((r, j) => (
+                  <div
+                    key={j}
+                    className="grid grid-cols-[minmax(140px,200px)_1fr] gap-4 px-4 py-2.5"
+                  >
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-[#2294BD] leading-snug pt-0.5">
+                      {r.label}
+                    </div>
+                    <div className="text-[14px] text-[#000000] leading-[1.6]">
+                      {renderInline(r.value)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        }
+
+        if (sec.kind === "table") {
+          const [header, ...body] = sec.rows;
+          return (
+            <div
+              key={i}
+              className="overflow-x-auto rounded-xl border border-[#E8DDD4] shadow-sm"
+            >
+              <table className="w-full text-[13px] border-collapse">
+                <thead>
+                  <tr className="bg-gradient-to-r from-[#2294BD] to-[#1F86AC]">
+                    {header.map((cell, j) => (
+                      <th
+                        key={j}
+                        className="px-4 py-2.5 text-left text-[11px] font-bold uppercase tracking-wider text-white first:rounded-tl-xl last:rounded-tr-xl"
+                      >
+                        {renderInline(cell)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E8DDD4]/60">
+                  {body.map((row, ri) => (
+                    <tr
+                      key={ri}
+                      className={`transition-colors hover:bg-[#2294BD]/5 ${
+                        ri % 2 === 1 ? "bg-[#FAF8F5]" : "bg-white"
+                      }`}
+                    >
+                      {row.map((cell, ci) => (
+                        <td
+                          key={ci}
+                          className={`px-4 py-2.5 text-[#2A2A2A] leading-[1.6] align-top ${
+                            ci === 0 ? "font-semibold text-[#1A1A1A]" : ""
+                          }`}
+                        >
+                          {renderInline(cell)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+
+        if (sec.kind === "teachingPoint") {
+          return (
+            <div
+              key={i}
+              className="rounded-xl border border-[#FAA51A]/30 bg-gradient-to-br from-[#FAA51A]/8 to-[#FAA51A]/4 px-4 py-3.5 border-l-4 border-l-[#FAA51A]"
+            >
+              <p className="text-[10px] font-bold uppercase tracking-widest text-[#9B6A00] mb-1.5">
+                Teaching point
+              </p>
+              <p className="text-[14px] text-[#000000] leading-[1.65]">
+                {renderInline(sec.text)}
+              </p>
+            </div>
+          );
+        }
+
+        // paragraph
+        return (
+          <p
+            key={i}
+            className="text-[14px] text-[#404040] leading-[1.7]"
+          >
+            {renderInline(sec.text)}
+          </p>
+        );
+      })}
+
+      {designSpecs.length > 0 && (
+        <details className="group rounded-lg border border-[#E8DDD4] bg-[#F9F6F3] px-4 py-2.5">
+          <summary className="cursor-pointer list-none flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-[#9A918A] hover:text-[#404040]">
+            <span>Design notes</span>
+            <span className="text-[#9A918A] group-open:rotate-180 transition-transform">
+              ⌄
+            </span>
+          </summary>
+          <div className="mt-2.5 space-y-1.5">
+            {designSpecs.map((d, i) => (
+              <p
+                key={i}
+                className="text-[12px] text-[#9A918A] leading-[1.6]"
+              >
+                {renderInline(d.text)}
+              </p>
+            ))}
+          </div>
+        </details>
+      )}
+    </div>
+  );
+}
+
 function Block({ block }: { block: LessonBlock }) {
   const s = BLOCK_STYLE[block.type];
   const accentClass = s.accent ? `border-l-4 ${s.accent}` : "";
@@ -265,24 +531,28 @@ function Block({ block }: { block: LessonBlock }) {
     const hasDirectVisual = Boolean(VisualComponent || block.src);
     return (
       <div
-        className={`rounded-xl border ${s.border} ${s.bg} px-5 py-5 mb-5`}
+        className={`rounded-2xl border ${s.border} bg-gradient-to-br from-[#FBF7F3] to-[#F4ECE3] px-5 py-5 mb-5 shadow-sm`}
       >
-        <p
-          className={`text-[10px] font-bold uppercase tracking-widest mb-1 ${s.labelColor}`}
-        >
-          {s.label}
-        </p>
-        <p className="text-[15px] font-semibold text-[#000000] leading-snug mb-4">
+        <div className="flex items-center gap-2 mb-1.5">
+          <span className="inline-block w-1 h-3.5 rounded-full bg-[#2294BD]" />
+          <p
+            className={`text-[10px] font-bold uppercase tracking-widest ${s.labelColor}`}
+          >
+            {s.label}
+          </p>
+        </div>
+        <p className="text-[16px] font-semibold text-[#000000] leading-snug mb-4">
           {block.title}
         </p>
 
-        {block.content && hasDirectVisual && (
-          <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
-            {renderContent(block.content)}
-          </div>
+        {block.caption && (
+          <p className="text-[13px] text-[#404040] leading-[1.55] mb-4 border-l-2 border-[#2294BD]/30 pl-3 italic">
+            {block.caption}
+          </p>
         )}
+
         {VisualComponent && (
-          <div className="mb-4">
+          <div className="mb-4 rounded-xl bg-white border border-[#E8DDD4] p-4">
             <VisualComponent />
           </div>
         )}
@@ -291,27 +561,21 @@ function Block({ block }: { block: LessonBlock }) {
           <img
             src={block.src}
             alt={block.caption ?? block.title}
-            className="w-full rounded-lg mb-4 object-contain max-h-80"
+            className="w-full rounded-xl mb-4 object-contain max-h-80 border border-[#E8DDD4] bg-white"
           />
         )}
-        {!hasDirectVisual && (
-          <div className="mb-4 rounded-xl border border-dashed border-[#2294BD]/30 bg-white/70 p-4">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-[#2294BD] mb-2">
-              Visual Blueprint
-            </p>
-            {block.content ? (
-              <div className="text-[14px] text-[#000000] leading-[1.7]">
-                {renderContent(block.content)}
-              </div>
-            ) : (
-              <p className="text-sm text-[#404040] leading-relaxed">
-                This lesson references a custom visual that has not been implemented as a component yet.
-              </p>
-            )}
+        {block.content && hasDirectVisual && (
+          <div className="text-[14px] text-[#000000] leading-[1.7] mb-3">
+            {renderContent(block.content)}
           </div>
         )}
-        {block.caption && (
-          <p className="text-xs text-[#404040] italic mb-3">{block.caption}</p>
+        {!hasDirectVisual && block.content && (
+          <VisualBlueprint content={block.content} />
+        )}
+        {!hasDirectVisual && !block.content && (
+          <p className="text-sm text-[#404040] leading-relaxed mb-3">
+            This lesson references a custom visual that has not been implemented as a component yet.
+          </p>
         )}
         {block.whyItMatters && (
           <div className="rounded-lg border border-[#2294BD]/20 bg-[#2294BD]/5 px-4 py-3 mb-3">

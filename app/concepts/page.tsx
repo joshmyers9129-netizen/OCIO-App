@@ -159,7 +159,7 @@ export default function ConceptsPage() {
                     {Math.round((n.score ?? 0) * 100)}%
                   </span>
                   <span className="text-[10px] text-[#404040]">
-                    â†’ {findDownstream(n.lessonId, edges).size} downstream
+                    → {findDownstream(n.lessonId, edges).size} downstream
                   </span>
                 </button>
               ))}
@@ -183,7 +183,7 @@ export default function ConceptsPage() {
                 onClick={() => setSelectedNode(null)}
                 className="text-xs text-[#404040] hover:text-[#000000]"
               >
-                âœ•
+                ✕
               </button>
             </div>
             <div className="flex gap-4 mb-3">
@@ -195,7 +195,7 @@ export default function ConceptsPage() {
                     : selectedNodeData.score >= 0.5 ? "text-[#9B6A00]"
                     : "text-[#D9532B]"
                 }`}>
-                  {selectedNodeData.score !== null ? `${Math.round(selectedNodeData.score * 100)}%` : "â€”"}
+                  {selectedNodeData.score !== null ? `${Math.round(selectedNodeData.score * 100)}%` : "—"}
                 </p>
               </div>
               <div>
@@ -221,7 +221,7 @@ export default function ConceptsPage() {
               href={`/lesson/${selectedNodeData.lessonId}`}
               className="text-xs font-medium text-[#2294BD] hover:underline"
             >
-              Go to lesson â†’
+              Go to lesson →
             </Link>
           </div>
         )}
@@ -232,7 +232,7 @@ export default function ConceptsPage() {
             All lessons
           </p>
           <p className="text-xs text-[#9A918A] mb-4">
-            Tap a lesson to see its dependencies. Arrow (â†’) = feeds into next lesson.
+            Tap a lesson to see its dependencies. Arrow (→) = feeds into next lesson.
             {atRisk.size > 0 && (
               <span className="text-[#D9532B]"> Orange border = at risk from weak foundation.</span>
             )}
@@ -269,7 +269,7 @@ export default function ConceptsPage() {
                   {/* Prereq arrows */}
                   {n.prerequisites.length > 0 && (
                     <span className="text-[10px] text-[#9A918A] flex-shrink-0">
-                      â†{n.prerequisites.length}
+                      ←{n.prerequisites.length}
                     </span>
                   )}
 
@@ -281,7 +281,7 @@ export default function ConceptsPage() {
                   {/* Score pill */}
                   <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full flex-shrink-0 ${scoreColor(n.score, n.status)}`}>
                     {n.status === "not-started"
-                      ? "â€”"
+                      ? "—"
                       : n.score !== null
                       ? `${Math.round(n.score * 100)}%`
                       : "IP"}
@@ -289,7 +289,7 @@ export default function ConceptsPage() {
 
                   {/* Downstream arrow */}
                   {hasArrow && (
-                    <span className="text-[10px] text-[#9A918A] flex-shrink-0">â†’</span>
+                    <span className="text-[10px] text-[#9A918A] flex-shrink-0">→</span>
                   )}
                 </button>
               );
@@ -300,11 +300,11 @@ export default function ConceptsPage() {
           <div className="flex gap-4 mt-4 pt-3 border-t border-[#F0E6DD]">
             <div className="flex items-center gap-1.5">
               <span className="w-3 h-3 rounded bg-[#2A9D60]/15 border border-[#2A9D60]/30" />
-              <span className="text-[10px] text-[#404040]">â‰¥80%</span>
+              <span className="text-[10px] text-[#404040]">≥80%</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-3 h-3 rounded bg-[#FAA51A]/15 border border-[#FAA51A]/30" />
-              <span className="text-[10px] text-[#404040]">50â€“79%</span>
+              <span className="text-[10px] text-[#404040]">50–79%</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-3 h-3 rounded bg-[#D9532B]/12 border border-[#D9532B]/30" />

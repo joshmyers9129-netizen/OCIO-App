@@ -13,7 +13,7 @@ import { AiHelper } from "@/components/AiHelper";
 import { topicLabel } from "@/lib/topics";
 import { DEFAULT_MODULE_ID } from "@/lib/modules";
 
-// â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── constants ─────────────────────────────────────────────────────────────────
 
 const MODULE_ID = DEFAULT_MODULE_ID;
 
@@ -50,7 +50,7 @@ const PRIORITY_CONFIG: Record<
   low: { label: "Low", dot: "bg-[#2294BD]", text: "text-[#2294BD]" },
 };
 
-// â”€â”€ card component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── card component ────────────────────────────────────────────────────────────
 
 const SRS_RATINGS = [
   { quality: 1, label: "Again", color: "text-[#D9532B] bg-[#D9532B]/10 hover:bg-[#D9532B]/18" },
@@ -179,7 +179,7 @@ function ReviewCardTile({
           <AiHelper prompt={aiPrompt} label="Help me understand this" />
         )}
 
-        {/* SRS rating buttons â€” shown after answer is visible */}
+        {/* SRS rating buttons — shown after answer is visible */}
         {bodyVisible && !rated && (
           <div className="mt-3">
             <p className="text-[10px] font-bold text-[#404040] uppercase tracking-widest mb-2">
@@ -201,7 +201,7 @@ function ReviewCardTile({
 
         {rated && (
           <div className="mt-3 text-xs text-[#2294BD] font-medium">
-            âœ“ Scheduled for next review
+            ✓ Scheduled for next review
           </div>
         )}
 
@@ -222,18 +222,18 @@ function ReviewCardTile({
   );
 }
 
-// â”€â”€ empty state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── empty state ───────────────────────────────────────────────────────────────
 
 function EmptyState({ hasProgress }: { hasProgress: boolean }) {
   return (
     <div className="rounded-2xl border border-[#E8DDD4] bg-white px-6 py-10 text-center">
-      <div className="text-3xl mb-3">{hasProgress ? "âœ“" : "â—‹"}</div>
+      <div className="text-3xl mb-3">{hasProgress ? "✓" : "○"}</div>
       <h3 className="text-base font-semibold text-[#000000] mb-2">
         {hasProgress ? "All caught up" : "No cards yet"}
       </h3>
       <p className="text-sm text-[#404040] leading-relaxed max-w-xs mx-auto">
         {hasProgress
-          ? "Review cards appear here as you complete lessons. Come back after your next session â€” or mark more lessons complete on the Modules page."
+          ? "Review cards appear here as you complete lessons. Come back after your next session — or mark more lessons complete on the Modules page."
           : "Complete or start a lesson on the Modules page to unlock review cards here."}
       </p>
       {!hasProgress && (
@@ -241,14 +241,14 @@ function EmptyState({ hasProgress }: { hasProgress: boolean }) {
           href="/modules"
           className="inline-block mt-4 text-sm font-medium text-[#2294BD] bg-[#2294BD]/10 hover:bg-[#2294BD]/18 px-4 py-2 rounded-xl transition-colors"
         >
-          Go to Modules â†’
+          Go to Modules →
         </a>
       )}
     </div>
   );
 }
 
-// â”€â”€ grouping views â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── grouping views ────────────────────────────────────────────────────────────
 
 const PRIORITY_ORDER: Priority[] = ["high", "medium", "low"];
 
@@ -337,7 +337,7 @@ function GroupedByTopic({
   );
 }
 
-// â”€â”€ page â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── page ──────────────────────────────────────────────────────────────────────
 
 type GroupMode = "priority" | "topic";
 
@@ -402,7 +402,7 @@ export default function ReviewPage() {
             )}
           </div>
 
-          {/* Group toggle â€” only show when there are cards */}
+          {/* Group toggle — only show when there are cards */}
           {!isEmpty && (
             <div className="flex items-center bg-white border border-[#E8DDD4] rounded-xl p-0.5 text-xs font-medium">
               {(["priority", "topic"] as GroupMode[]).map((m) => (

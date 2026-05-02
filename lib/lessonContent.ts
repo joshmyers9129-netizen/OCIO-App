@@ -30,14 +30,6 @@ Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
 
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
 It also improves later oversight.`
       },
       {
@@ -357,12 +349,6 @@ A sharper framing also improves internal decision making. Once the team uses dec
 The sharper frame reveals the missing diligence question.
 
 It also improves later monitoring.
-
-That is why wording matters here.
-
-That is why wording matters here.
-
-That is why wording matters here.
 
 That is why wording matters here.`
       },
@@ -1304,14 +1290,6 @@ The sharper framing improves nearly every subsequent decision. Service-model cho
 The sharper frame reveals the missing diligence question.
 
 It also improves later monitoring.
-
-That is why wording matters here.
-
-That is why wording matters here.
-
-That is why wording matters here.
-
-That is why wording matters here.
 
 That is why wording matters here.`
       },

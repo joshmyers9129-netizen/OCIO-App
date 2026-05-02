@@ -14,7 +14,7 @@ import { topicLabel } from "@/lib/topics";
 
 const MODULE_ID = DEFAULT_MODULE_ID;
 
-// â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Helpers ──────────────────────────────────────────────────────────────────
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -54,7 +54,7 @@ type PracticeQuestion = MCQuestion & {
   topics: string[];
 };
 
-// â”€â”€ MC Question Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── MC Question Card ─────────────────────────────────────────────────────────
 
 function PracticeQuestionCard({
   q,
@@ -124,10 +124,10 @@ function PracticeQuestionCard({
           if (submitted) {
             if (isRight) {
               style = "border-2 border-[#2294BD] bg-[#2294BD]/10 text-[#000000]";
-              icon = "âœ“";
+              icon = "✓";
             } else if (isSelected && !isRight) {
               style = "border-2 border-[#D9532B] bg-[#D9532B]/8 text-[#D9532B] line-through";
-              icon = "âœ—";
+              icon = "✗";
             } else {
               style = "border border-[#E8DDD4] bg-[#F9F6F3] text-[#9A918A] cursor-default";
             }
@@ -172,14 +172,14 @@ function PracticeQuestionCard({
               : "bg-[#D9532B]/8 text-[#D9532B] border border-[#D9532B]/20"
           }`}
         >
-          {isCorrect ? "âœ“ Correct" : "âœ— Incorrect â€” correct answer highlighted above"}
+          {isCorrect ? "✓ Correct" : "✗ Incorrect — correct answer highlighted above"}
         </div>
       )}
     </div>
   );
 }
 
-// â”€â”€ Mode selection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Mode selection ───────────────────────────────────────────────────────────
 
 type PracticeMode = "select" | "mixed" | "drill";
 
@@ -263,7 +263,7 @@ export default function PracticePage() {
                 href="/modules"
                 className="inline-block text-sm font-medium text-[#2294BD] bg-[#2294BD]/10 hover:bg-[#2294BD]/18 px-4 py-2 rounded-xl transition-colors"
               >
-                Go to Modules â†’
+                Go to Modules →
               </Link>
             </div>
           ) : (
@@ -277,7 +277,7 @@ export default function PracticePage() {
                   Mixed questions from all completed lessons
                 </p>
                 <p className="text-sm text-[#404040] mb-4">
-                  Interleaved practice across topics â€” proven to improve long-term retention.
+                  Interleaved practice across topics — proven to improve long-term retention.
                   {allMC.length > 0 && (
                     <span className="text-[#2294BD]"> {allMC.length} questions available.</span>
                   )}
@@ -324,7 +324,7 @@ export default function PracticePage() {
                   </button>
                 ) : (
                   <p className="text-sm text-[#2294BD] font-medium">
-                    âœ“ No wrong answers â€” keep it up.
+                    ✓ No wrong answers — keep it up.
                   </p>
                 )}
               </div>
@@ -335,7 +335,7 @@ export default function PracticePage() {
     );
   }
 
-  // â”€â”€ Active quiz session â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // ── Active quiz session ──────────────────────────────────────────────────────
 
   return (
     <main className="min-h-screen bg-[#FBF7F3]">
@@ -385,7 +385,7 @@ export default function PracticePage() {
             </p>
             <p className="text-sm text-[#404040] mb-4">
               {score.correct === score.total
-                ? "Perfect score â€” strong recall across topics."
+                ? "Perfect score — strong recall across topics."
                 : score.correct / score.total >= 0.7
                 ? "Good work. Review the ones you missed."
                 : "Some gaps to close. Consider reviewing those lessons."}

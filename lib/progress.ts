@@ -67,7 +67,7 @@ function loadReview(): Record<string, string> {
   }
 }
 
-// â”€â”€ Card-level struggle tracking â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Card-level struggle tracking ──────────────────────────────────────────────
 
 const STRUGGLES_KEY = "ocio-app-card-struggles";
 
@@ -133,7 +133,7 @@ export function setLessonStatus(
   saveAll(all);
 }
 
-// â”€â”€ Quiz History (multiple attempts) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Quiz History (multiple attempts) ─────────────────────────────────────────
 
 const QUIZ_HISTORY_KEY = "ocio-app-quiz-history";
 
@@ -166,7 +166,7 @@ export function saveQuizAttempt(lessonId: string, result: QuizResult): QuizAttem
   return attempt;
 }
 
-// â”€â”€ Wrong-Answer Tracking â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Wrong-Answer Tracking ────────────────────────────────────────────────────
 
 const WRONG_ANSWERS_KEY = "ocio-app-wrong-answers";
 
@@ -203,7 +203,7 @@ export function removeWrongAnswer(lessonId: string, questionId: string) {
   localStorage.setItem(WRONG_ANSWERS_KEY, JSON.stringify(filtered));
 }
 
-// â”€â”€ SRS Card State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── SRS Card State ───────────────────────────────────────────────────────────
 
 const SRS_KEY = "ocio-app-srs";
 
@@ -227,7 +227,7 @@ export function getAllSRSStates(): Record<string, SRSCardState> {
 
 /**
  * SM-2 algorithm update.
- * quality: 0â€“5 (0â€“2 = fail/still-learning, 3 = hard, 4 = good, 5 = easy)
+ * quality: 0–5 (0–2 = fail/still-learning, 3 = hard, 4 = good, 5 = easy)
  */
 export function updateSRS(cardId: string, quality: number): SRSCardState {
   const all = loadSRS();
@@ -275,7 +275,7 @@ export function updateSRS(cardId: string, quality: number): SRSCardState {
   return updated;
 }
 
-// â”€â”€ Resume Position â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Resume Position ──────────────────────────────────────────────────────────
 
 const POSITION_KEY = "ocio-app-positions";
 

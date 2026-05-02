@@ -95,8 +95,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -113,12 +111,6 @@ The stronger answer creates a clearer action sequence.
 It also creates a cleaner test of success.
 
 Good examples show owner, metric, and escalation path.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
 
 That is the practical standard here.
 
@@ -171,14 +163,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -214,8 +198,6 @@ Ask what changes in policy, delegation, or reporting.
 If nothing changes, the point is still too abstract.
 
 OCIO work requires operating translation.
-
-That is what makes the point decision-useful.
 
 That is what makes the point decision-useful.
 
@@ -383,10 +365,6 @@ A strong answer will use words like retained, delegated, shared, policy-bound, a
 Write it so another professional could act on it.
 
 The owner and control should be explicit.
-
-The follow-up evidence should be explicit too.
-
-The follow-up evidence should be explicit too.
 
 The follow-up evidence should be explicit too.
 
@@ -982,8 +960,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -1003,16 +979,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -1029,8 +995,6 @@ Ask what changes in policy, delegation, or reporting.
 If nothing changes, the point is still too abstract.
 
 OCIO work requires operating translation.
-
-That is what makes the point decision-useful.
 
 That is what makes the point decision-useful.
 
@@ -1082,8 +1046,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -1103,12 +1065,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -1125,14 +1081,6 @@ The stronger answer creates a clearer action sequence.
 It also creates a cleaner test of success.
 
 Good examples show owner, metric, and escalation path.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
 
 That is the practical standard here.
 
@@ -1186,10 +1134,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -1209,10 +1153,6 @@ OCIO work requires operating translation.
 
 That is what makes the point decision-useful.
 
-That is what makes the point decision-useful.
-
-That is what makes the point decision-useful.
-
 That is what makes the point decision-useful.`
       },
       {
@@ -1229,20 +1169,6 @@ The stronger answer creates a clearer action sequence.
 It also creates a cleaner test of success.
 
 Good examples show owner, metric, and escalation path.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
-
-That is the practical standard here.
 
 That is the practical standard here.
 
@@ -1323,10 +1249,6 @@ The owner and control should be explicit.
 
 The follow-up evidence should be explicit too.
 
-The follow-up evidence should be explicit too.
-
-The follow-up evidence should be explicit too.
-
 The follow-up evidence should be explicit too.`
       },
       {
@@ -1339,10 +1261,6 @@ That framing is helpful because it replaces a vague size-based discussion with a
 That moves the room from commentary to decision design.
 
 It also improves minutes and follow-up tasks.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
 
 Used consistently, it improves accountability.
 
@@ -1442,12 +1360,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -1649,8 +1561,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       },
       {
@@ -1752,12 +1662,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -1772,20 +1676,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -1983,14 +1873,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       },
       {
@@ -2096,12 +1978,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -2116,22 +1992,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -2333,8 +2193,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       }
     ],
@@ -2427,14 +2285,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -2449,20 +2299,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -2662,10 +2498,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       }
     ],
@@ -2758,14 +2590,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -2780,14 +2604,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -2986,10 +2802,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       },
       {
@@ -3095,22 +2907,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -3125,22 +2921,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -3342,10 +3122,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       }
     ],
@@ -3438,18 +3214,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -3464,24 +3228,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -3677,14 +3423,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       },
       {
@@ -3788,14 +3526,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -3810,18 +3540,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -4019,12 +3737,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Add one more sentence that names the operating consequence clearly.
 
 Add one more sentence that names the operating consequence clearly.`
@@ -4119,20 +3831,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -4147,18 +3845,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -4360,12 +4046,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       }
     ],
@@ -4458,24 +4138,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -4490,22 +4152,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -4715,20 +4361,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Add one more sentence that names the operating consequence clearly.
-
-Add one more sentence that names the operating consequence clearly.
-
-Add one more sentence that names the operating consequence clearly.
-
 Add one more sentence that names the operating consequence clearly.
 
 Add one more sentence that names the operating consequence clearly.`
@@ -4823,14 +4455,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -4845,22 +4469,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -5060,12 +4668,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Used consistently, it improves accountability.`
       },
       {
@@ -5171,16 +4773,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -5195,20 +4787,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -5408,14 +4986,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Add one more sentence that names the operating consequence clearly.
-
-Add one more sentence that names the operating consequence clearly.
-
 Add one more sentence that names the operating consequence clearly.
 
 Add one more sentence that names the operating consequence clearly.`
@@ -5510,12 +5080,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -5530,22 +5094,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -5749,14 +5297,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
 Add one more sentence that names the operating consequence clearly.`
       }
     ],
@@ -5849,22 +5389,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -5879,22 +5403,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -6100,16 +5608,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Add one more sentence that names the operating consequence clearly.
-
-Add one more sentence that names the operating consequence clearly.
-
 Add one more sentence that names the operating consequence clearly.
 
 Add one more sentence that names the operating consequence clearly.`
@@ -6204,12 +5702,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -6224,24 +5716,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -6447,16 +5921,6 @@ It also improves minutes and follow-up tasks.
 
 Used consistently, it improves accountability.
 
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
-
-Add one more sentence that names the operating consequence clearly.
-
 Add one more sentence that names the operating consequence clearly.
 
 Add one more sentence that names the operating consequence clearly.`
@@ -6551,16 +6015,6 @@ Authority without clarity fails in implementation.
 
 Monitoring exposes that quickly.
 
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
-Monitoring exposes that quickly.
-
 Monitoring exposes that quickly.`
       },
       {
@@ -6575,24 +6029,6 @@ Loose framing creates loose decisions.
 Sharper framing ties objective to accountability.
 
 That reduces false disagreement.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
-
-It also improves later oversight.
 
 It also improves later oversight.
 
@@ -6793,10 +6229,6 @@ That is how an OCIO discussion becomes decision-useful. It also creates a cleane
 That moves the room from commentary to decision design.
 
 It also improves minutes and follow-up tasks.
-
-Used consistently, it improves accountability.
-
-Used consistently, it improves accountability.
 
 Used consistently, it improves accountability.
 

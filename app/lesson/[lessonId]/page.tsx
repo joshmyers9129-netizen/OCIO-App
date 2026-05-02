@@ -276,7 +276,7 @@ function Block({ block }: { block: LessonBlock }) {
           {block.title}
         </p>
 
-        {block.content && hasDirectVisual && (
+        {block.content && block.src && !VisualComponent && (
           <div className="text-[15px] text-[#000000] leading-[1.7] mb-3">
             {renderContent(block.content)}
           </div>
